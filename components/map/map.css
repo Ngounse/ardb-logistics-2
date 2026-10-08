@@ -1,0 +1,44 @@
+.map-wrap {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 77px);
+    /* calculate height of the screen minus the heading */
+}
+
+.map {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: auto !important;
+}
+
+.map-container {
+    position: relative;
+    z-index: 0;
+}
+
+.mapbox-gl-draw_ctrl-draw-btn {
+    pointer-events: auto !important;
+}
+
+.mapbox-gl-draw_ctrl-draw-btn:not(:disabled):hover {
+    cursor: pointer !important;
+}
+
+.mapbox-gl-draw_ctrl-draw-btn:not(:disabled) {
+    z-index: 5 !important;
+}
+
+.mapboxgl-canvas {
+    cursor: crosshair !important;
+    pointer-events: auto !important;
+}
+
+.marker origin-marker {
+    width: 32px;
+    height: 32px;
+    /* background-image: url('../../assets/origin-marker.png'); */
+    background-size: cover;
+    border-radius: 50%;
+    cursor: pointer;
+}

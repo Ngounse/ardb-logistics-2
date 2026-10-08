@@ -1,0 +1,5 @@
+services:
+  nextjs:
+    container_name: logistic-portal-uat
+    env_file:
+        - .env.uat

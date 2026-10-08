@@ -1,0 +1,1939 @@
+{
+    "status": "success",
+    "message": "Permissions retrieved successfully",
+    "data": {
+        "content": [
+            {
+                "id": 1,
+                "name": "USER_READ",
+                "description": "Can view users",
+                "path": "/person-service/api/v1/users/{id}",
+                "httpMethod": "GET",
+                "createdAt": "2026-05-04T06:49:37.025669Z",
+                "groupName": null
+            },
+            {
+                "id": 2,
+                "name": "USER_WRITE",
+                "description": "Can create users",
+                "path": "/api/v1/users",
+                "httpMethod": "POST",
+                "createdAt": "2026-05-04T06:49:37.091842Z",
+                "groupName": null
+            },
+            {
+                "id": 3,
+                "name": "USER_UPDATE",
+                "description": "Can update users",
+                "path": "/api/v1/users/{id}",
+                "httpMethod": "PUT",
+                "createdAt": "2026-05-04T06:49:37.125942Z",
+                "groupName": null
+            },
+            {
+                "id": 4,
+                "name": "USER_DELETE",
+                "description": "Can delete users",
+                "path": "/api/v1/users/{id}",
+                "httpMethod": "DELETE",
+                "createdAt": "2026-05-04T06:49:37.154493Z",
+                "groupName": null
+            },
+            {
+                "id": 5,
+                "name": "USER_ENABLE",
+                "description": "Can enable/disable users",
+                "path": "/person-service/api/v1/users/{id}/status",
+                "httpMethod": "PATCH",
+                "createdAt": "2026-05-04T06:49:37.176380Z",
+                "groupName": null
+            },
+            {
+                "id": 6,
+                "name": "ROLE_READ",
+                "description": "Can view roles",
+                "path": "/api/v1/roles",
+                "httpMethod": "GET",
+                "createdAt": "2026-05-04T06:49:37.200772Z",
+                "groupName": null
+            },
+            {
+                "id": 7,
+                "name": "ROLE_WRITE",
+                "description": "Can create roles",
+                "path": "/api/v1/roles",
+                "httpMethod": "POST",
+                "createdAt": "2026-05-04T06:49:37.231956Z",
+                "groupName": null
+            },
+            {
+                "id": 8,
+                "name": "ROLE_DELETE",
+                "description": "Can delete roles",
+                "path": "/api/v1/roles/{id}",
+                "httpMethod": "DELETE",
+                "createdAt": "2026-05-04T06:49:37.261610Z",
+                "groupName": null
+            },
+            {
+                "id": 9,
+                "name": "PERMISSION_READ",
+                "description": "Can view permissions",
+                "path": "/api/v1/permissions",
+                "httpMethod": "GET",
+                "createdAt": "2026-05-04T06:49:37.286715Z",
+                "groupName": null
+            },
+            {
+                "id": 10,
+                "name": "DRIVER_ASSIGN",
+                "description": "Can assign driver to zone",
+                "path": "/zone-service/drivers/{id}/assign",
+                "httpMethod": "POST",
+                "createdAt": "2026-05-11T07:10:44Z",
+                "groupName": null
+            },
+            {
+                "id": 11,
+                "name": "DRIVER_MY_ZONES",
+                "description": "Can view my zones",
+                "path": "/zone-service/drivers/myZones",
+                "httpMethod": "GET",
+                "createdAt": "2026-05-11T07:10:44Z",
+                "groupName": null
+            },
+            {
+                "id": 12,
+                "name": "DRIVER_ZONE_LIST",
+                "description": "Can list drivers in zone",
+                "path": "/zone-service/drivers/{id}",
+                "httpMethod": "GET",
+                "createdAt": "2026-05-11T07:10:44Z",
+                "groupName": null
+            },
+            {
+                "id": 13,
+                "name": "DRIVER_REMOVE",
+                "description": "Can remove driver from zone",
+                "path": "/zone-service/drivers/{id}",
+                "httpMethod": "DELETE",
+                "createdAt": "2026-05-11T07:10:44Z",
+                "groupName": null
+            },
+            {
+                "id": 14,
+                "name": "ZONE_LIST",
+                "description": "Can list all zones",
+                "path": "/zone-service/zones",
+                "httpMethod": "GET",
+                "createdAt": "2026-05-11T07:10:44Z",
+                "groupName": null
+            },
+            {
+                "id": 15,
+                "name": "ZONE_CREATE",
+                "description": "Can create a zone",
+                "path": "/zone-service/zones",
+                "httpMethod": "POST",
+                "createdAt": "2026-05-11T07:10:44Z",
+                "groupName": null
+            },
+            {
+                "id": 16,
+                "name": "ZONE_READ",
+                "description": "Can view a specific zone",
+                "path": "/zone-service/zones/{id}",
+                "httpMethod": "GET",
+                "createdAt": "2026-05-11T07:10:44Z",
+                "groupName": null
+            },
+            {
+                "id": 17,
+                "name": "ZONE_UPDATE",
+                "description": "Can update a zone",
+                "path": "/zone-service/zones/{id}",
+                "httpMethod": "PUT",
+                "createdAt": "2026-05-11T07:10:44Z",
+                "groupName": null
+            },
+            {
+                "id": 18,
+                "name": "ZONE_STATUS_UPDATE",
+                "description": "Can change zone status",
+                "path": "/zone-service/zones/{id}/status",
+                "httpMethod": "PUT",
+                "createdAt": "2026-05-11T07:10:44Z",
+                "groupName": null
+            },
+            {
+                "id": 19,
+                "name": "ZONE_BY_LOCATION",
+                "description": "Can find zone by location",
+                "path": "/zone-service/zones/location",
+                "httpMethod": "GET",
+                "createdAt": "2026-05-11T07:10:44Z",
+                "groupName": null
+            },
+            {
+                "id": 20,
+                "name": "ZONE_VALIDATE_MULTI_DROP",
+                "description": "Can validate multi-drop off",
+                "path": "/zone-service/zones/validate-multi-drop-off",
+                "httpMethod": "POST",
+                "createdAt": "2026-05-11T07:10:44Z",
+                "groupName": null
+            },
+            {
+                "id": 21,
+                "name": "readall",
+                "description": "string2",
+                "path": "/api/v1/users/{id}/readall",
+                "httpMethod": "get",
+                "createdAt": "2026-05-13T04:09:57.402111Z",
+                "groupName": null
+            },
+            {
+                "id": 22,
+                "name": "MESSAGE_WRITE",
+                "description": "Can create messages",
+                "path": "/chat-service/api/v1/messages",
+                "httpMethod": "POST",
+                "createdAt": "2026-05-22T08:24:01.581071Z",
+                "groupName": null
+            },
+            {
+                "id": 23,
+                "name": "GROUP_WRITE",
+                "description": "Can create groups",
+                "path": "/chat-service/api/v1/groups",
+                "httpMethod": "POST",
+                "createdAt": "2026-05-22T08:24:01.581071Z",
+                "groupName": null
+            },
+            {
+                "id": 24,
+                "name": "CHAT_READ",
+                "description": "Can view chats",
+                "path": "/chat-service/api/v1/chats",
+                "httpMethod": "GET",
+                "createdAt": "2026-05-22T08:24:01.581071Z",
+                "groupName": null
+            },
+            {
+                "id": 25,
+                "name": "CHAT_WRITE",
+                "description": "Can create chats",
+                "path": "/chat-service/api/v1/chats",
+                "httpMethod": "POST",
+                "createdAt": "2026-05-22T08:24:01.581071Z",
+                "groupName": null
+            },
+            {
+                "id": 26,
+                "name": "MESSAGE_READ_BY_CHAT",
+                "description": "Can view messages by chat ID",
+                "path": "/chat-service/api/v1/messages/{id}",
+                "httpMethod": "GET",
+                "createdAt": "2026-05-22T08:24:01.581071Z",
+                "groupName": null
+            },
+            {
+                "id": 27,
+                "name": "FILE_READ",
+                "description": "Can view files by ID",
+                "path": "/chat-service/api/v1/files/{id}",
+                "httpMethod": "GET",
+                "createdAt": "2026-05-22T08:24:01.581071Z",
+                "groupName": null
+            },
+            {
+                "id": 28,
+                "name": "CHAT_READ_BY_USER",
+                "description": "Can view chats by user ID",
+                "path": "/chat-service/api/v1/chats/{id}",
+                "httpMethod": "GET",
+                "createdAt": "2026-05-22T08:24:01.581071Z",
+                "groupName": null
+            },
+            {
+                "id": 29,
+                "name": "CHAT_DELETE",
+                "description": "Can delete chats",
+                "path": "/chat-service/api/v1/chats/{id}",
+                "httpMethod": "DELETE",
+                "createdAt": "2026-05-22T08:24:01.581071Z",
+                "groupName": null
+            },
+            {
+                "id": 31,
+                "name": "DRIVER_PENDING",
+                "description": "Can view Pending delivery",
+                "path": "/delivery-service/api/v1/driver/pending",
+                "httpMethod": "GET",
+                "createdAt": "2026-05-22T08:24:01.581Z",
+                "groupName": null
+            },
+            {
+                "id": 32,
+                "name": "DRIVER_TRANSIT_UPDATE",
+                "description": "Can transition driver delivery to transit",
+                "path": "/delivery-service/api/v1/driver/transit/{id}",
+                "httpMethod": "PUT",
+                "createdAt": "2026-05-22T08:58:04.989740Z",
+                "groupName": null
+            },
+            {
+                "id": 33,
+                "name": "DRIVER_RETURN_UPDATE",
+                "description": "Can process driver package return",
+                "path": "/delivery-service/api/v1/driver/return",
+                "httpMethod": "PUT",
+                "createdAt": "2026-05-22T08:58:04.989740Z",
+                "groupName": null
+            },
+            {
+                "id": 34,
+                "name": "DRIVER_RETURN_READ_BY_PARAM",
+                "description": "Can view driver return by parameter",
+                "path": "/delivery-service/api/v1/driver/return/{param}",
+                "httpMethod": "GET",
+                "createdAt": "2026-05-22T08:58:04.989740Z",
+                "groupName": null
+            },
+            {
+                "id": 35,
+                "name": "DRIVER_LIVE_UPDATE",
+                "description": "Can update driver live status",
+                "path": "/delivery-service/api/v1/driver/live",
+                "httpMethod": "PUT",
+                "createdAt": "2026-05-22T08:58:04.989740Z",
+                "groupName": null
+            },
+            {
+                "id": 36,
+                "name": "DRIVER_LIVE_READ_BY_PARAM",
+                "description": "Can view driver live info by parameter",
+                "path": "/delivery-service/api/v1/driver/live/param",
+                "httpMethod": "GET",
+                "createdAt": "2026-05-22T08:58:04.989740Z",
+                "groupName": null
+            },
+            {
+                "id": 37,
+                "name": "DRIVER_ARRIVE_PICKUP_UPDATE",
+                "description": "Can mark driver arrival at pickup",
+                "path": "/delivery-service/api/v1/driver/arrive-pickup/{id}",
+                "httpMethod": "PUT",
+                "createdAt": "2026-05-22T08:58:04.989740Z",
+                "groupName": null
+            },
+            {
+                "id": 38,
+                "name": "DRIVER_ACCEPT_UPDATE",
+                "description": "Can accept delivery as driver",
+                "path": "/delivery-service/api/v1/driver/accept/{id}",
+                "httpMethod": "PUT",
+                "createdAt": "2026-05-22T08:58:04.989740Z",
+                "groupName": null
+            },
+            {
+                "id": 39,
+                "name": "DRIVER_POD_WRITE",
+                "description": "Can submit driver proof of delivery",
+                "path": "/delivery-service/api/v1/driver/proof-of-delivery",
+                "httpMethod": "POST",
+                "createdAt": "2026-05-22T08:58:04.989740Z",
+                "groupName": null
+            },
+            {
+                "id": 40,
+                "name": "DRIVER_CANCEL_WRITE",
+                "description": "Can request driver cancellation",
+                "path": "/delivery-service/api/v1/driver/cancel",
+                "httpMethod": "POST",
+                "createdAt": "2026-05-22T08:58:04.989740Z",
+                "groupName": null
+            },
+            {
+                "id": 41,
+                "name": "DRIVER_CANCEL_REJECT_WRITE",
+                "description": "Can reject driver cancellation request",
+                "path": "/delivery-service/api/v1/driver/cancel/{id}/reject",
+                "httpMethod": "POST",
+                "createdAt": "2026-05-22T08:58:04.989740Z",
+                "groupName": null
+            },
+            {
+                "id": 42,
+                "name": "DRIVER_CANCEL_APPROVE_WRITE",
+                "description": "Can approve driver cancellation request",
+                "path": "/delivery-service/api/v1/driver/cancel/{id}/approve",
+                "httpMethod": "POST",
+                "createdAt": "2026-05-22T08:58:04.989740Z",
+                "groupName": null
+            },
+            {
+                "id": 43,
+                "name": "DRIVER_PENDING_READ",
+                "description": "Can view driver pending requests",
+                "path": "/delivery-service/api/v1/driver/pending",
+                "httpMethod": "GET",
+                "createdAt": "2026-05-22T08:58:04.989740Z",
+                "groupName": null
+            },
+            {
+                "id": 44,
+                "name": "DRIVER_FUTURE_DELIVERY_READ",
+                "description": "Can view driver future deliveries",
+                "path": "/delivery-service/api/v1/driver/future-delivery",
+                "httpMethod": "GET",
+                "createdAt": "2026-05-22T08:58:04.989740Z",
+                "groupName": null
+            },
+            {
+                "id": 45,
+                "name": "DRIVER_CURRENT_DELIVERY_READ",
+                "description": "Can view driver current deliveries",
+                "path": "/delivery-service/api/v1/driver/current-delivery",
+                "httpMethod": "GET",
+                "createdAt": "2026-05-22T08:58:04.989740Z",
+                "groupName": null
+            },
+            {
+                "id": 46,
+                "name": "DRIVER_COMPLETED_DELIVERY_READ",
+                "description": "Can view driver completed deliveries",
+                "path": "/delivery-service/api/v1/driver/completed-delivery",
+                "httpMethod": "GET",
+                "createdAt": "2026-05-22T08:58:04.989740Z",
+                "groupName": null
+            },
+            {
+                "id": 47,
+                "name": "DRIVER_CANCEL_REQUEST_READ",
+                "description": "Can view driver cancellation requests",
+                "path": "/delivery-service/api/v1/driver/cancel/request",
+                "httpMethod": "GET",
+                "createdAt": "2026-05-22T08:58:04.989740Z",
+                "groupName": null
+            },
+            {
+                "id": 48,
+                "name": "SELF_CANCEL_WRITE",
+                "description": "Can request self-cancellation",
+                "path": "/delivery-service/api/v1/self/cancel",
+                "httpMethod": "POST",
+                "createdAt": "2026-05-22T08:58:04.989740Z",
+                "groupName": null
+            },
+            {
+                "id": 49,
+                "name": "SELF_CANCEL_READ_BY_ID",
+                "description": "Can view self-cancellation info by delivery ID",
+                "path": "/delivery-service/api/v1/self/cancel/{id}",
+                "httpMethod": "GET",
+                "createdAt": "2026-05-22T08:58:04.989740Z",
+                "groupName": null
+            },
+            {
+                "id": 50,
+                "name": "SELF_CANCEL_READ_BY_PARAM",
+                "description": "Can view self-cancellation info by parameter",
+                "path": "/delivery-service/api/v1/self/cancel/param",
+                "httpMethod": "GET",
+                "createdAt": "2026-05-22T08:58:04.989740Z",
+                "groupName": null
+            },
+            {
+                "id": 51,
+                "name": "SELF_FUTURE_READ",
+                "description": "Can view self future history",
+                "path": "/delivery-service/api/v1/self/future",
+                "httpMethod": "GET",
+                "createdAt": "2026-05-22T08:58:04.989740Z",
+                "groupName": null
+            },
+            {
+                "id": 52,
+                "name": "SELF_CURRENT_READ",
+                "description": "Can view self current activity",
+                "path": "/delivery-service/api/v1/self/current",
+                "httpMethod": "GET",
+                "createdAt": "2026-05-22T08:58:04.989740Z",
+                "groupName": null
+            },
+            {
+                "id": 53,
+                "name": "SELF_COMPLETED_READ",
+                "description": "Can view self completed history",
+                "path": "/delivery-service/api/v1/self/completed",
+                "httpMethod": "GET",
+                "createdAt": "2026-05-22T08:58:04.989740Z",
+                "groupName": null
+            },
+            {
+                "id": 54,
+                "name": "EXPRESS_QUOTE_WRITE",
+                "description": "Can request express quote",
+                "path": "/delivery-service/api/v1/express/quote",
+                "httpMethod": "POST",
+                "createdAt": "2026-05-22T08:58:04.989740Z",
+                "groupName": null
+            },
+            {
+                "id": 55,
+                "name": "EXPRESS_CONFIRM_WRITE",
+                "description": "Can confirm express order",
+                "path": "/delivery-service/api/v1/express/confirm",
+                "httpMethod": "POST",
+                "createdAt": "2026-05-22T08:58:04.989740Z",
+                "groupName": null
+            },
+            {
+                "id": 56,
+                "name": "EXPRESS_READ_BY_PARAM",
+                "description": "Can view express info by parameter",
+                "path": "/delivery-service/api/v1/express/param",
+                "httpMethod": "GET",
+                "createdAt": "2026-05-22T08:58:04.989740Z",
+                "groupName": null
+            },
+            {
+                "id": 57,
+                "name": "BASE_FEE_READ",
+                "description": "Can view base fees",
+                "path": "/delivery-service/api/v1/base-fee",
+                "httpMethod": "GET",
+                "createdAt": "2026-05-22T08:58:04.989740Z",
+                "groupName": null
+            },
+            {
+                "id": 58,
+                "name": "BASE_FEE_WRITE",
+                "description": "Can create base fees",
+                "path": "/delivery-service/api/v1/base-fee",
+                "httpMethod": "POST",
+                "createdAt": "2026-05-22T08:58:04.989740Z",
+                "groupName": null
+            },
+            {
+                "id": 59,
+                "name": "BASE_FEE_READ_BY_PARAM",
+                "description": "Can view base fee by parameter",
+                "path": "/delivery-service/api/v1/base-fee/param",
+                "httpMethod": "GET",
+                "createdAt": "2026-05-22T08:58:04.989740Z",
+                "groupName": null
+            },
+            {
+                "id": 60,
+                "name": "DELIVERY_LIVE_READ",
+                "description": "Can view live delivery status",
+                "path": "/delivery-service/api/v1/delivery/live/{id}",
+                "httpMethod": "GET",
+                "createdAt": "2026-05-22T08:58:04.989740Z",
+                "groupName": null
+            },
+            {
+                "id": 61,
+                "name": "DELIVERY_INVOICE_READ",
+                "description": "Can view delivery invoice",
+                "path": "/delivery-service/api/v1/delivery/invoice/{id}",
+                "httpMethod": "GET",
+                "createdAt": "2026-05-22T08:58:04.989740Z",
+                "groupName": null
+            },
+            {
+                "id": 62,
+                "name": "VEHICLE_READ",
+                "description": "Can view vehicles",
+                "path": "/vehicle-service/api/v1/vehicle",
+                "httpMethod": "GET",
+                "createdAt": "2026-05-22T09:06:35.329733Z",
+                "groupName": null
+            },
+            {
+                "id": 63,
+                "name": "PROFILE_READ",
+                "description": "Can view profile",
+                "path": "/person-service/api/v1/persons/profile",
+                "httpMethod": "GET",
+                "createdAt": "2026-05-22T10:06:11.052383Z",
+                "groupName": null
+            },
+            {
+                "id": 64,
+                "name": "ADDRESS_READ",
+                "description": "Get All Adress",
+                "path": "/person-service/api/v1/address",
+                "httpMethod": "GET",
+                "createdAt": "2026-05-25T10:06:11.052Z",
+                "groupName": null
+            },
+            {
+                "id": 65,
+                "name": "ADDRESS_WRITE",
+                "description": "Can create address",
+                "path": "/person-service/api/v1/address",
+                "httpMethod": "POST",
+                "createdAt": "2026-05-25T08:58:04.989Z",
+                "groupName": null
+            },
+            {
+                "id": 70,
+                "name": "DOWNLOAD_FILE",
+                "description": "Can download file",
+                "path": "/person-service/api/v1/files/{id}",
+                "httpMethod": "GET",
+                "createdAt": "2026-05-25T02:36:10.954Z",
+                "groupName": null
+            },
+            {
+                "id": 71,
+                "name": "PROFILE_UPDATE",
+                "description": "Can update photo",
+                "path": "/person-service/api/v1/persons/profile/photo",
+                "httpMethod": "POST",
+                "createdAt": "2026-05-25T03:03:15.829Z",
+                "groupName": null
+            },
+            {
+                "id": 74,
+                "name": "ADDRESS_READ_FILTER",
+                "description": "Can get addresses with pagination and filter",
+                "path": "/person-service/api/v1/address?page={page}&size={size}&name={name}",
+                "httpMethod": "GET",
+                "createdAt": "2026-05-25T02:34:27.509840Z",
+                "groupName": null
+            },
+            {
+                "id": 75,
+                "name": "ADDRESS_UPDATE",
+                "description": "Can update address",
+                "path": "/person-service/api/v1/address",
+                "httpMethod": "PUT",
+                "createdAt": "2026-05-25T02:34:27.509840Z",
+                "groupName": null
+            },
+            {
+                "id": 76,
+                "name": "ADDRESS_DELETE",
+                "description": "Can delete address",
+                "path": "/person-service/api/v1/address/{id}",
+                "httpMethod": "DELETE",
+                "createdAt": "2026-05-25T02:34:27.509840Z",
+                "groupName": null
+            },
+            {
+                "id": 77,
+                "name": "ADDRESS_SELF_READ",
+                "description": "Can get my addresses",
+                "path": "/person-service/api/v1/address/self",
+                "httpMethod": "GET",
+                "createdAt": "2026-05-25T02:34:44.298986Z",
+                "groupName": null
+            },
+            {
+                "id": 78,
+                "name": "ADDRESS_SELF_CREATE",
+                "description": "Can create my address",
+                "path": "/person-service/api/v1/address/self",
+                "httpMethod": "POST",
+                "createdAt": "2026-05-25T02:34:44.298986Z",
+                "groupName": null
+            },
+            {
+                "id": 79,
+                "name": "ADDRESS_SELF_UPDATE",
+                "description": "Can update my address",
+                "path": "/person-service/api/v1/address/self/{id}",
+                "httpMethod": "PUT",
+                "createdAt": "2026-05-25T02:34:44.298986Z",
+                "groupName": null
+            },
+            {
+                "id": 80,
+                "name": "ADDRESS_SELF_DELETE",
+                "description": "Can delete my address",
+                "path": "/person-service/api/v1/address/self/{id}",
+                "httpMethod": "DELETE",
+                "createdAt": "2026-05-25T02:34:44.298986Z",
+                "groupName": null
+            },
+            {
+                "id": 82,
+                "name": "BECOME_DRIVER_SELF_READ",
+                "description": "Can get my become driver request list",
+                "path": "/person-service/api/v1/become-driver/self",
+                "httpMethod": "GET",
+                "createdAt": "2026-05-25T02:35:41.737841Z",
+                "groupName": null
+            },
+            {
+                "id": 83,
+                "name": "BECOME_DRIVER_SELF_READ_BY_ID",
+                "description": "Can view my become driver request",
+                "path": "/person-service/api/v1/become-driver/self/{id}",
+                "httpMethod": "GET",
+                "createdAt": "2026-05-25T02:35:41.737841Z",
+                "groupName": null
+            },
+            {
+                "id": 84,
+                "name": "BECOME_DRIVER_SELF_CREATE",
+                "description": "Can create become driver request",
+                "path": "/person-service/api/v1/become-driver/self",
+                "httpMethod": "POST",
+                "createdAt": "2026-05-25T02:35:41.737841Z",
+                "groupName": null
+            },
+            {
+                "id": 85,
+                "name": "BECOME_DRIVER_SELF_UPDATE",
+                "description": "Can update become driver request",
+                "path": "/person-service/api/v1/become-driver/self/{id}",
+                "httpMethod": "PUT",
+                "createdAt": "2026-05-25T02:35:41.737841Z",
+                "groupName": null
+            },
+            {
+                "id": 86,
+                "name": "BECOME_DRIVER_SELF_DELETE",
+                "description": "Can delete become driver request",
+                "path": "/person-service/api/v1/become-driver/self/{id}",
+                "httpMethod": "DELETE",
+                "createdAt": "2026-05-25T02:35:41.737841Z",
+                "groupName": null
+            },
+            {
+                "id": 87,
+                "name": "BECOME_DRIVER_READ",
+                "description": "Can get all become driver requests",
+                "path": "/person-service/api/v1/become-driver",
+                "httpMethod": "GET",
+                "createdAt": "2026-05-25T02:35:41.737841Z",
+                "groupName": null
+            },
+            {
+                "id": 88,
+                "name": "BECOME_DRIVER_READ_BY_ID",
+                "description": "Can get become driver by id",
+                "path": "/person-service/api/v1/become-driver/{id}",
+                "httpMethod": "GET",
+                "createdAt": "2026-05-25T02:35:41.737841Z",
+                "groupName": null
+            },
+            {
+                "id": 89,
+                "name": "BECOME_DRIVER_REVIEW",
+                "description": "Can review become driver request",
+                "path": "/person-service/api/v1/become-driver/review",
+                "httpMethod": "PUT",
+                "createdAt": "2026-05-25T02:35:41.737841Z",
+                "groupName": null
+            },
+            {
+                "id": 90,
+                "name": "BECOME_DRIVER_APPROVE",
+                "description": "Can approve become driver request",
+                "path": "/person-service/api/v1/become-driver/approve",
+                "httpMethod": "PUT",
+                "createdAt": "2026-05-25T02:35:41.737841Z",
+                "groupName": null
+            },
+            {
+                "id": 91,
+                "name": "BECOME_DRIVER_REJECT",
+                "description": "Can reject become driver request",
+                "path": "/person-service/api/v1/become-driver/reject",
+                "httpMethod": "PUT",
+                "createdAt": "2026-05-25T02:35:41.737841Z",
+                "groupName": null
+            },
+            {
+                "id": 92,
+                "name": "DRIVER_PARAM",
+                "description": "Can get driver param",
+                "path": "/person-service/api/v1/driver/param",
+                "httpMethod": "GET",
+                "createdAt": "2026-05-25T02:35:59.672065Z",
+                "groupName": null
+            },
+            {
+                "id": 93,
+                "name": "DRIVER_READ",
+                "description": "Can get driver page",
+                "path": "/person-service/api/v1/driver",
+                "httpMethod": "GET",
+                "createdAt": "2026-05-25T02:35:59.672065Z",
+                "groupName": null
+            },
+            {
+                "id": 94,
+                "name": "DRIVER_READ_BY_ID",
+                "description": "Can view driver by id",
+                "path": "/person-service/api/v1/driver/{id}",
+                "httpMethod": "GET",
+                "createdAt": "2026-05-25T02:35:59.672065Z",
+                "groupName": null
+            },
+            {
+                "id": 95,
+                "name": "DRIVER_CREATE",
+                "description": "Can create driver",
+                "path": "/person-service/api/v1/driver",
+                "httpMethod": "POST",
+                "createdAt": "2026-05-25T02:35:59.672065Z",
+                "groupName": null
+            },
+            {
+                "id": 96,
+                "name": "DRIVER_UPDATE",
+                "description": "Can update driver",
+                "path": "/person-service/api/v1/driver",
+                "httpMethod": "PUT",
+                "createdAt": "2026-05-25T02:35:59.672065Z",
+                "groupName": null
+            },
+            {
+                "id": 97,
+                "name": "DRIVER_SELF_UPDATE_LOCATION",
+                "description": "Can update driver location",
+                "path": "/person-service/api/v1/driver/self/available",
+                "httpMethod": "PUT",
+                "createdAt": "2026-05-25T02:35:59.672065Z",
+                "groupName": null
+            },
+            {
+                "id": 98,
+                "name": "DRIVER_PENDING_REGISTRATION",
+                "description": "Can get pending driver registration",
+                "path": "/person-service/api/v1/driver/pending-registration",
+                "httpMethod": "GET",
+                "createdAt": "2026-05-25T02:35:59.672065Z",
+                "groupName": null
+            },
+            {
+                "id": 99,
+                "name": "DRIVER_APPROVE",
+                "description": "Can approve driver registration",
+                "path": "/person-service/api/v1/driver/approve",
+                "httpMethod": "PUT",
+                "createdAt": "2026-05-25T02:35:59.672065Z",
+                "groupName": null
+            },
+            {
+                "id": 100,
+                "name": "DRIVER_REJECT",
+                "description": "Can reject driver registration",
+                "path": "/person-service/api/v1/driver/reject",
+                "httpMethod": "PUT",
+                "createdAt": "2026-05-25T02:35:59.672065Z",
+                "groupName": null
+            },
+            {
+                "id": 101,
+                "name": "DRIVER_REVIEW",
+                "description": "Can review driver registration",
+                "path": "/person-service/api/v1/driver/review",
+                "httpMethod": "PUT",
+                "createdAt": "2026-05-25T02:35:59.672065Z",
+                "groupName": null
+            },
+            {
+                "id": 102,
+                "name": "PERSON_READ",
+                "description": "Can get all persons",
+                "path": "/person-service/api/v1/persons",
+                "httpMethod": "GET",
+                "createdAt": "2026-05-25T02:36:10.954933Z",
+                "groupName": null
+            },
+            {
+                "id": 103,
+                "name": "PERSON_READ_FILTER",
+                "description": "Can get persons with filter",
+                "path": "/person-service/api/v1/persons?phone={phone}&name={name}",
+                "httpMethod": "GET",
+                "createdAt": "2026-05-25T02:36:10.954933Z",
+                "groupName": null
+            },
+            {
+                "id": 104,
+                "name": "PERSON_PARAM",
+                "description": "Can get person param",
+                "path": "/person-service/api/v1/persons/param",
+                "httpMethod": "GET",
+                "createdAt": "2026-05-25T02:36:10.954933Z",
+                "groupName": null
+            },
+            {
+                "id": 105,
+                "name": "PERSON_READ_BY_ID",
+                "description": "Can get person by id",
+                "path": "/person-service/api/v1/persons/{id}",
+                "httpMethod": "GET",
+                "createdAt": "2026-05-25T02:36:10.954933Z",
+                "groupName": null
+            },
+            {
+                "id": 106,
+                "name": "PERSON_CREATE",
+                "description": "Can create person",
+                "path": "/person-service/api/v1/persons",
+                "httpMethod": "POST",
+                "createdAt": "2026-05-25T02:36:10.954933Z",
+                "groupName": null
+            },
+            {
+                "id": 107,
+                "name": "PERSON_UPDATE",
+                "description": "Can update person",
+                "path": "/person-service/api/v1/persons",
+                "httpMethod": "PUT",
+                "createdAt": "2026-05-25T02:36:10.954933Z",
+                "groupName": null
+            },
+            {
+                "id": 108,
+                "name": "PERSON_PROFILE_UPDATE",
+                "description": "Can update profile",
+                "path": "/person-service/api/v1/persons/profile",
+                "httpMethod": "PUT",
+                "createdAt": "2026-05-25T02:36:10.954933Z",
+                "groupName": null
+            },
+            {
+                "id": 109,
+                "name": "PERSON_PROFILE_PHOTO_DELETE",
+                "description": "Can delete profile photo",
+                "path": "/person-service/api/v1/persons/profile/photo/{id}",
+                "httpMethod": "DELETE",
+                "createdAt": "2026-05-25T02:36:10.954933Z",
+                "groupName": null
+            },
+            {
+                "id": 110,
+                "name": "REGISTER_DRIVER_PARAM",
+                "description": "Can get register driver param",
+                "path": "/person-service/api/v1/register/driver/param",
+                "httpMethod": "GET",
+                "createdAt": "2026-05-25T02:36:10.954933Z",
+                "groupName": null
+            },
+            {
+                "id": 111,
+                "name": "REGISTER_DRIVER_PHONE",
+                "description": "Can register driver by phone",
+                "path": "/person-service/api/v1/register/driver/phone",
+                "httpMethod": "POST",
+                "createdAt": "2026-05-25T02:36:10.954933Z",
+                "groupName": null
+            },
+            {
+                "id": 112,
+                "name": "REGISTER_DRIVER_PHONE_VERIFY",
+                "description": "Can verify driver phone OTP",
+                "path": "/person-service/api/v1/register/driver/phone/verify",
+                "httpMethod": "POST",
+                "createdAt": "2026-05-25T02:36:10.954933Z",
+                "groupName": null
+            },
+            {
+                "id": 113,
+                "name": "REGISTER_DRIVER_EMAIL",
+                "description": "Can register driver by email",
+                "path": "/person-service/api/v1/register/driver/email",
+                "httpMethod": "POST",
+                "createdAt": "2026-05-25T02:36:10.954933Z",
+                "groupName": null
+            },
+            {
+                "id": 114,
+                "name": "REGISTER_DRIVER_EMAIL_VERIFY",
+                "description": "Can verify driver email OTP",
+                "path": "/person-service/api/v1/register/driver/email/verify",
+                "httpMethod": "POST",
+                "createdAt": "2026-05-25T02:36:10.954933Z",
+                "groupName": null
+            },
+            {
+                "id": 115,
+                "name": "REGISTER_DRIVER_CONFIRM",
+                "description": "Can confirm driver registration",
+                "path": "/person-service/api/v1/register/driver/confirm",
+                "httpMethod": "POST",
+                "createdAt": "2026-05-25T02:36:10.954933Z",
+                "groupName": null
+            },
+            {
+                "id": 116,
+                "name": "REGISTER_PARAM",
+                "description": "Can get register param",
+                "path": "/person-service/api/v1/register/phone/param",
+                "httpMethod": "GET",
+                "createdAt": "2026-05-25T02:36:10.954933Z",
+                "groupName": null
+            },
+            {
+                "id": 117,
+                "name": "REGISTER_PHONE",
+                "description": "Can register by phone",
+                "path": "/person-service/api/v1/register/phone",
+                "httpMethod": "POST",
+                "createdAt": "2026-05-25T02:36:10.954933Z",
+                "groupName": null
+            },
+            {
+                "id": 118,
+                "name": "REGISTER_PHONE_VERIFY",
+                "description": "Can verify phone OTP",
+                "path": "/person-service/api/v1/register/phone/verify",
+                "httpMethod": "POST",
+                "createdAt": "2026-05-25T02:36:10.954933Z",
+                "groupName": null
+            },
+            {
+                "id": 119,
+                "name": "REGISTER_MAIL",
+                "description": "Can register by mail",
+                "path": "/person-service/api/v1/register/mail",
+                "httpMethod": "POST",
+                "createdAt": "2026-05-25T02:36:10.954933Z",
+                "groupName": null
+            },
+            {
+                "id": 120,
+                "name": "REGISTER_MAIL_VERIFY",
+                "description": "Can verify mail OTP",
+                "path": "/person-service/api/v1/register/mail/verify",
+                "httpMethod": "POST",
+                "createdAt": "2026-05-25T02:36:10.954933Z",
+                "groupName": null
+            },
+            {
+                "id": 121,
+                "name": "REGISTER_CONFIRM",
+                "description": "Can confirm registration",
+                "path": "/person-service/api/v1/register/confirm",
+                "httpMethod": "POST",
+                "createdAt": "2026-05-25T02:36:10.954933Z",
+                "groupName": null
+            },
+            {
+                "id": 124,
+                "name": "VEHICLE_PARAM",
+                "description": "Can get vehicle param",
+                "path": "/vehicle-service/api/v1/vehicle/param",
+                "httpMethod": "GET",
+                "createdAt": "2026-05-25T03:03:15.829434Z",
+                "groupName": null
+            },
+            {
+                "id": 125,
+                "name": "VEHICLE_CREATE",
+                "description": "Can create vehicle",
+                "path": "/vehicle-service/api/v1/vehicle",
+                "httpMethod": "POST",
+                "createdAt": "2026-05-25T03:03:15.829434Z",
+                "groupName": null
+            },
+            {
+                "id": 126,
+                "name": "VEHICLE_UPDATE",
+                "description": "Can update vehicle",
+                "path": "/vehicle-service/api/v1/vehicle/{id}",
+                "httpMethod": "PUT",
+                "createdAt": "2026-05-25T03:03:15.829434Z",
+                "groupName": null
+            },
+            {
+                "id": 127,
+                "name": "VEHICLE_DELETE",
+                "description": "Can delete vehicle",
+                "path": "/vehicle-service/api/v1/vehicle/{id}",
+                "httpMethod": "DELETE",
+                "createdAt": "2026-05-25T03:03:15.829434Z",
+                "groupName": null
+            },
+            {
+                "id": 128,
+                "name": "VEHICLE_CATEGORY_READ",
+                "description": "Can view vehicle categories",
+                "path": "/vehicle-service/api/v1/vehicle-category",
+                "httpMethod": "GET",
+                "createdAt": "2026-05-25T03:03:15.829434Z",
+                "groupName": null
+            },
+            {
+                "id": 129,
+                "name": "VEHICLE_CATEGORY_READ_BY_ID",
+                "description": "Can view vehicle category by id",
+                "path": "/vehicle-service/api/v1/vehicle-category/{id}",
+                "httpMethod": "GET",
+                "createdAt": "2026-05-25T03:03:15.829434Z",
+                "groupName": null
+            },
+            {
+                "id": 130,
+                "name": "VEHICLE_CATEGORY_CREATE",
+                "description": "Can create vehicle category",
+                "path": "/vehicle-service/api/v1/vehicle-category",
+                "httpMethod": "POST",
+                "createdAt": "2026-05-25T03:03:15.829434Z",
+                "groupName": null
+            },
+            {
+                "id": 131,
+                "name": "VEHICLE_CATEGORY_UPDATE",
+                "description": "Can update vehicle category",
+                "path": "/vehicle-service/api/v1/vehicle-category/{id}",
+                "httpMethod": "PUT",
+                "createdAt": "2026-05-25T03:03:15.829434Z",
+                "groupName": null
+            },
+            {
+                "id": 132,
+                "name": "VEHICLE_CATEGORY_DELETE",
+                "description": "Can delete vehicle category",
+                "path": "/vehicle-service/api/v1/vehicle-category/{id}",
+                "httpMethod": "DELETE",
+                "createdAt": "2026-05-25T03:03:15.829434Z",
+                "groupName": null
+            },
+            {
+                "id": 133,
+                "name": "MAIL_TEMPLATE_READ_PAGED",
+                "description": "Can view mail templates with filters",
+                "path": "/notification-service/api/v1/mail-template",
+                "httpMethod": "GET",
+                "createdAt": "2026-05-25T03:59:57.422939Z",
+                "groupName": null
+            },
+            {
+                "id": 134,
+                "name": "MAIL_TEMPLATE_READ",
+                "description": "Can view all mail templates",
+                "path": "/notification-service/api/v1/mail-template",
+                "httpMethod": "GET",
+                "createdAt": "2026-05-25T03:59:57.422939Z",
+                "groupName": null
+            },
+            {
+                "id": 135,
+                "name": "MAIL_TEMPLATE_WRITE",
+                "description": "Can create mail templates",
+                "path": "/notification-service/api/v1/mail-template",
+                "httpMethod": "POST",
+                "createdAt": "2026-05-25T03:59:57.422939Z",
+                "groupName": null
+            },
+            {
+                "id": 136,
+                "name": "MAIL_TEMPLATE_UPDATE",
+                "description": "Can update mail templates",
+                "path": "/notification-service/api/v1/mail-template",
+                "httpMethod": "PUT",
+                "createdAt": "2026-05-25T03:59:57.422939Z",
+                "groupName": null
+            },
+            {
+                "id": 137,
+                "name": "MAIL_TEMPLATE_DELETE",
+                "description": "Can delete mail templates",
+                "path": "/notification-service/api/v1/mail-template/{id}",
+                "httpMethod": "DELETE",
+                "createdAt": "2026-05-25T03:59:57.422939Z",
+                "groupName": null
+            },
+            {
+                "id": 138,
+                "name": "NOTIFICATION_READ_PAGED",
+                "description": "Can view all notifications with filters",
+                "path": "/notification-service/api/v1/notification",
+                "httpMethod": "GET",
+                "createdAt": "2026-05-25T03:59:57.422939Z",
+                "groupName": null
+            },
+            {
+                "id": 139,
+                "name": "NOTIFICATION_DELETE",
+                "description": "Can delete any notification",
+                "path": "/notification-service/api/v1/notification/{id}",
+                "httpMethod": "DELETE",
+                "createdAt": "2026-05-25T03:59:57.422939Z",
+                "groupName": null
+            },
+            {
+                "id": 140,
+                "name": "NOTIFICATION_SELF_READ",
+                "description": "Can view own notifications",
+                "path": "/notification-service/api/v1/notification/self",
+                "httpMethod": "GET",
+                "createdAt": "2026-05-25T03:59:57.422939Z",
+                "groupName": null
+            },
+            {
+                "id": 141,
+                "name": "NOTIFICATION_SELF_TOTAL_READ",
+                "description": "Can view own total unread notifications",
+                "path": "/notification-service/api/v1/notification/self/total",
+                "httpMethod": "GET",
+                "createdAt": "2026-05-25T03:59:57.422939Z",
+                "groupName": null
+            },
+            {
+                "id": 142,
+                "name": "NOTIFICATION_SELF_MARK_READ",
+                "description": "Can mark own notification as read",
+                "path": "/notification-service/api/v1/notification/self/read/{id}",
+                "httpMethod": "PUT",
+                "createdAt": "2026-05-25T03:59:57.422939Z",
+                "groupName": null
+            },
+            {
+                "id": 143,
+                "name": "NOTIFICATION_SELF_DELETE",
+                "description": "Can delete own notification",
+                "path": "/notification-service/api/v1/notification/self/{id}",
+                "httpMethod": "DELETE",
+                "createdAt": "2026-05-25T03:59:57.422939Z",
+                "groupName": null
+            },
+            {
+                "id": 144,
+                "name": "PACKAGE_READ",
+                "description": "Can view packages",
+                "path": "/delivery-service/api/v1/packages",
+                "httpMethod": "GET",
+                "createdAt": "2026-05-27T07:11:36.581053Z",
+                "groupName": null
+            },
+            {
+                "id": 145,
+                "name": "PACKAGE_UPDATE",
+                "description": "Can update packages",
+                "path": "/delivery-service/api/v1/packages/{id}",
+                "httpMethod": "PUT",
+                "createdAt": "2026-05-27T07:11:36.581053Z",
+                "groupName": null
+            },
+            {
+                "id": 146,
+                "name": "PACKAGE_WRITE",
+                "description": "Can create packages",
+                "path": "/delivery-service/api/v1/packages",
+                "httpMethod": "POST",
+                "createdAt": "2026-05-27T07:11:36.581053Z",
+                "groupName": null
+            },
+            {
+                "id": 147,
+                "name": "PACKAGE_READ_BY_PARAM",
+                "description": "Can view package by parameter",
+                "path": "/delivery-service/api/v1/packages/param",
+                "httpMethod": "GET",
+                "createdAt": "2026-05-27T07:11:36.581053Z",
+                "groupName": null
+            },
+            {
+                "id": 148,
+                "name": "PACKAGE_DELETE",
+                "description": "Can delete packages",
+                "path": "/delivery-service/api/v1/packages/{id}",
+                "httpMethod": "DELETE",
+                "createdAt": "2026-05-27T07:11:36.581053Z",
+                "groupName": null
+            },
+            {
+                "id": 151,
+                "name": "BECOME_DRIVER_SELF_READ_PARAM",
+                "description": "Can get my become driver request list",
+                "path": "/person-service/api/v1/become-driver/self/param",
+                "httpMethod": "GET",
+                "createdAt": "2026-05-27T08:17:39.389642Z",
+                "groupName": null
+            },
+            {
+                "id": 152,
+                "name": "PERSON_PROFILE_DELETE",
+                "description": "Can delete user-profile",
+                "path": "/person-service/api/v1/persons/{id}",
+                "httpMethod": "DELETE",
+                "createdAt": "2026-06-29T15:05:23.308Z",
+                "groupName": null
+            },
+            {
+                "id": 153,
+                "name": "ORDER_UPDATE",
+                "description": "Can update order by id",
+                "path": "/delivery-service/api/v1/operator",
+                "httpMethod": "PUT",
+                "createdAt": "2026-06-30T01:23:09.168310Z",
+                "groupName": null
+            },
+            {
+                "id": 154,
+                "name": "DELIVERY_OPERATOR_READ_BY_PARAM",
+                "description": "Can get delivery operators by parameter",
+                "path": "/delivery-service/api/v1/operator/param",
+                "httpMethod": "GET",
+                "createdAt": "2026-06-30T01:23:09.168310Z",
+                "groupName": null
+            },
+            {
+                "id": 155,
+                "name": "DELIVERY_ORDER_READ",
+                "description": "Can get delivery order via operator",
+                "path": "/delivery-service/api/v1/operator",
+                "httpMethod": "GET",
+                "createdAt": "2026-06-30T01:23:09.168310Z",
+                "groupName": null
+            },
+            {
+                "id": 157,
+                "name": "TAXI_QUOTE_WRITE",
+                "description": "Can create delivery order via operator",
+                "path": "/delivery-service/api/v1/taxi/quote",
+                "httpMethod": "POST",
+                "createdAt": "2026-06-26T03:56:55.538Z",
+                "groupName": null
+            },
+            {
+                "id": 158,
+                "name": "TAXI_ORDER_PAY_AS_YOU_GO",
+                "description": "Can update order for pay-as-you-go taxi",
+                "path": "/delivery-service/api/v1/taxi/pay-as-you-go",
+                "httpMethod": "POST",
+                "createdAt": "2026-06-26T03:56:55.538Z",
+                "groupName": null
+            },
+            {
+                "id": 159,
+                "name": "TAXI_ORDER_CONFIRM",
+                "description": "Can confirm taxi order",
+                "path": "/delivery-service/api/v1/taxi/confirm",
+                "httpMethod": "POST",
+                "createdAt": "2026-06-26T03:56:55.538Z",
+                "groupName": null
+            },
+            {
+                "id": 160,
+                "name": "TAXI_ORDER_READ_PARAM",
+                "description": "Can get taxi order parameters",
+                "path": "/delivery-service/api/v1/taxi/param",
+                "httpMethod": "GET",
+                "createdAt": "2026-06-26T03:56:55.538Z",
+                "groupName": null
+            },
+            {
+                "id": 161,
+                "name": "TAXI_TRIP_END",
+                "description": "Can end taxi trip as driver",
+                "path": "/delivery-service/api/v1/taxi/pay-as-you-go/driver/end-trip",
+                "httpMethod": "POST",
+                "createdAt": "2026-06-26T03:56:55.538Z",
+                "groupName": null
+            },
+            {
+                "id": 162,
+                "name": "DRIVER_NEARBY_READ",
+                "description": "Can view nearby drivers",
+                "path": "/person-service/api/v1/driver/near-by",
+                "httpMethod": "GET",
+                "createdAt": "2026-07-07T07:52:12.611806Z",
+                "groupName": null
+            },
+            {
+                "id": 163,
+                "name": "CATEGORY_READ",
+                "description": "Can view categories",
+                "path": "/merchant-service/api/v1/categories",
+                "httpMethod": "GET",
+                "createdAt": "2026-07-07T12:17:28.223077Z",
+                "groupName": null
+            },
+            {
+                "id": 164,
+                "name": "CATEGORY_WRITE",
+                "description": "Can create categories",
+                "path": "/merchant-service/api/v1/categories",
+                "httpMethod": "POST",
+                "createdAt": "2026-07-07T12:17:28.223077Z",
+                "groupName": null
+            },
+            {
+                "id": 165,
+                "name": "CATEGORY_UPDATE",
+                "description": "Can update categories",
+                "path": "/merchant-service/api/v1/categories/{id}",
+                "httpMethod": "PUT",
+                "createdAt": "2026-07-07T12:17:28.223077Z",
+                "groupName": null
+            },
+            {
+                "id": 166,
+                "name": "CATEGORY_GET",
+                "description": "Can get category by id",
+                "path": "/merchant-service/api/v1/categories/{id}",
+                "httpMethod": "GET",
+                "createdAt": "2026-07-07T12:17:28.223077Z",
+                "groupName": null
+            },
+            {
+                "id": 167,
+                "name": "CATEGORY_STATUS",
+                "description": "Can change category status",
+                "path": "/merchant-service/api/v1/categories/{id}",
+                "httpMethod": "POST",
+                "createdAt": "2026-07-07T12:17:28.223077Z",
+                "groupName": null
+            },
+            {
+                "id": 168,
+                "name": "INVENTORY_WRITE",
+                "description": "Can create inventories",
+                "path": "/merchant-service/api/v1/inventories",
+                "httpMethod": "POST",
+                "createdAt": "2026-07-07T12:17:28.223077Z",
+                "groupName": null
+            },
+            {
+                "id": 169,
+                "name": "INVENTORY_INCREASE",
+                "description": "Can increase stock",
+                "path": "/merchant-service/api/v1/inventories/stock-in",
+                "httpMethod": "POST",
+                "createdAt": "2026-07-07T12:17:28.223077Z",
+                "groupName": null
+            },
+            {
+                "id": 170,
+                "name": "INVENTORY_DECREASE",
+                "description": "Can decrease stock",
+                "path": "/merchant-service/api/v1/inventories/stock-out",
+                "httpMethod": "POST",
+                "createdAt": "2026-07-07T12:17:28.223077Z",
+                "groupName": null
+            },
+            {
+                "id": 171,
+                "name": "ORDER_WRITE",
+                "description": "Can create order",
+                "path": "/merchant-service/api/v1/orders",
+                "httpMethod": "POST",
+                "createdAt": "2026-07-07T12:17:28.223077Z",
+                "groupName": null
+            },
+            {
+                "id": 172,
+                "name": "ORDER_READ",
+                "description": "Can get all order",
+                "path": "/merchant-service/api/v1/orders",
+                "httpMethod": "GET",
+                "createdAt": "2026-07-07T12:17:28.223077Z",
+                "groupName": null
+            },
+            {
+                "id": 173,
+                "name": "ORDER_READ_BY_ID",
+                "description": "Can get order by id",
+                "path": "/merchant-service/api/v1/orders/{id}",
+                "httpMethod": "GET",
+                "createdAt": "2026-07-07T12:17:28.223077Z",
+                "groupName": null
+            },
+            {
+                "id": 174,
+                "name": "PRODUCT_READ",
+                "description": "Can view products",
+                "path": "/merchant-service/api/v1/products",
+                "httpMethod": "GET",
+                "createdAt": "2026-07-07T12:17:28.223077Z",
+                "groupName": null
+            },
+            {
+                "id": 175,
+                "name": "PRODUCT_WRITE",
+                "description": "Can create products",
+                "path": "/merchant-service/api/v1/products",
+                "httpMethod": "POST",
+                "createdAt": "2026-07-07T12:17:28.223077Z",
+                "groupName": null
+            },
+            {
+                "id": 176,
+                "name": "PRODUCT_UPDATE",
+                "description": "Can update products",
+                "path": "/merchant-service/api/v1/products/{id}",
+                "httpMethod": "PUT",
+                "createdAt": "2026-07-07T12:17:28.223077Z",
+                "groupName": null
+            },
+            {
+                "id": 177,
+                "name": "PRODUCT_READ_BY_ID",
+                "description": "Can get product by id",
+                "path": "/merchant-service/api/v1/products/{id}",
+                "httpMethod": "GET",
+                "createdAt": "2026-07-07T12:17:28.223077Z",
+                "groupName": null
+            },
+            {
+                "id": 178,
+                "name": "PRODUCT_CHANGE_STATUS",
+                "description": "Can change product status",
+                "path": "/merchant-service/api/v1/products/{id}",
+                "httpMethod": "POST",
+                "createdAt": "2026-07-07T12:17:28.223077Z",
+                "groupName": null
+            },
+            {
+                "id": 179,
+                "name": "PRODUCT_6_READ_BY_CATEGORY",
+                "description": "Can get products by category",
+                "path": "/merchant-service/api/v1/products/category/{id}",
+                "httpMethod": "GET",
+                "createdAt": "2026-07-07T12:17:28.223077Z",
+                "groupName": null
+            },
+            {
+                "id": 180,
+                "name": "BRANCH_READ",
+                "description": "Can view branches",
+                "path": "/merchant-service/api/v1/branches",
+                "httpMethod": "GET",
+                "createdAt": "2026-07-07T12:17:28.223077Z",
+                "groupName": null
+            },
+            {
+                "id": 181,
+                "name": "BRANCH_WRITE",
+                "description": "Can create branches",
+                "path": "/merchant-service/api/v1/branches",
+                "httpMethod": "POST",
+                "createdAt": "2026-07-07T12:17:28.223077Z",
+                "groupName": null
+            },
+            {
+                "id": 182,
+                "name": "BRANCH_UPDATE",
+                "description": "Can update branches",
+                "path": "/merchant-service/api/v1/branches/{id}",
+                "httpMethod": "PUT",
+                "createdAt": "2026-07-07T12:17:28.223077Z",
+                "groupName": null
+            },
+            {
+                "id": 183,
+                "name": "BRANCH_READ_BY_ID",
+                "description": "Can get branches by id",
+                "path": "/merchant-service/api/v1/branches/{id}",
+                "httpMethod": "GET",
+                "createdAt": "2026-07-07T12:17:28.223077Z",
+                "groupName": null
+            },
+            {
+                "id": 184,
+                "name": "BRANCH_CHANGE_STATUS",
+                "description": "Can change branches status",
+                "path": "/merchant-service/api/v1/branches/{id}",
+                "httpMethod": "POST",
+                "createdAt": "2026-07-07T12:17:28.223077Z",
+                "groupName": null
+            },
+            {
+                "id": 185,
+                "name": "DELIVERY_READ_LIVE_LOCATION",
+                "description": "Can view delivery live location",
+                "path": "/delivery-service/api/v1/delivery/live/{id}",
+                "httpMethod": "GET",
+                "createdAt": "2026-07-13T06:12:06.226455Z",
+                "groupName": null
+            },
+            {
+                "id": 192,
+                "name": "AGENT_READ",
+                "description": "Can view agent by ID",
+                "path": "/person-service/api/v1/agent/{id}",
+                "httpMethod": "GET",
+                "createdAt": "2026-07-13T07:30:26.269827Z",
+                "groupName": null
+            },
+            {
+                "id": 193,
+                "name": "AGENT_UPDATE",
+                "description": "Can update agent",
+                "path": "/person-service/api/v1/agent/{id}",
+                "httpMethod": "PUT",
+                "createdAt": "2026-07-13T07:30:26.269827Z",
+                "groupName": null
+            },
+            {
+                "id": 194,
+                "name": "AGENT_DELETE",
+                "description": "Can delete agent",
+                "path": "/person-service/api/v1/agent/{id}",
+                "httpMethod": "DELETE",
+                "createdAt": "2026-07-13T07:30:26.269827Z",
+                "groupName": null
+            },
+            {
+                "id": 195,
+                "name": "AGENT_READ_ALL",
+                "description": "Can view all agents",
+                "path": "/person-service/api/v1/agent",
+                "httpMethod": "GET",
+                "createdAt": "2026-07-13T07:30:26.269827Z",
+                "groupName": null
+            },
+            {
+                "id": 196,
+                "name": "AGENT_CREATE",
+                "description": "Can create agent",
+                "path": "/person-service/api/v1/agent",
+                "httpMethod": "POST",
+                "createdAt": "2026-07-13T07:30:26.269827Z",
+                "groupName": null
+            },
+            {
+                "id": 197,
+                "name": "AGENT_PARAM_READ",
+                "description": "Can view agent parameters",
+                "path": "/person-service/api/v1/agent/param",
+                "httpMethod": "GET",
+                "createdAt": "2026-07-13T07:30:26.269827Z",
+                "groupName": null
+            },
+            {
+                "id": 198,
+                "name": "DELIVERY_DETAIL_READ",
+                "description": "Can view delivery detail",
+                "path": "/delivery-service/api/v1/delivery/{id}",
+                "httpMethod": "GET",
+                "createdAt": "2026-07-16T06:35:39.269111Z",
+                "groupName": null
+            },
+            {
+                "id": 203,
+                "name": "DELIVERY_DRIVER_ACCEPTED_READ",
+                "description": "Can view driver accepted delivery details",
+                "path": "/delivery-service/topic/delivery/driver-accepted/{id}",
+                "httpMethod": "GET",
+                "createdAt": "2026-07-20T07:38:29.327350Z",
+                "groupName": null
+            },
+            {
+                "id": 204,
+                "name": "PENDING_DRIVER_REGISTRATION_DETAIL_READ",
+                "description": "Can view pending driver registration details",
+                "path": "/person-service/api/v1/driver/pending-registration/{id}",
+                "httpMethod": "GET",
+                "createdAt": "2026-07-23T02:32:30.806158Z",
+                "groupName": null
+            },
+            {
+                "id": 205,
+                "name": "DELIVERY_PREVIEW_FILES",
+                "description": "Can preview file of delivery",
+                "path": "/delivery-service/api/v1/files/{id}",
+                "httpMethod": "GET",
+                "createdAt": "2026-07-23T04:04:07.671658Z",
+                "groupName": null
+            },
+            {
+                "id": 206,
+                "name": "GET_COMMISSION_RULE",
+                "description": "Get Commission Rule",
+                "path": "/delivery-service/api/v1/commission-rule",
+                "httpMethod": "GET",
+                "createdAt": "2026-08-05T02:53:25.889444Z",
+                "groupName": null
+            },
+            {
+                "id": 207,
+                "name": "CREATE_COMMISSION_RULE",
+                "description": "Create Commission Rule",
+                "path": "/delivery-service/api/v1/commission-rule",
+                "httpMethod": "POST",
+                "createdAt": "2026-08-05T02:53:25.889444Z",
+                "groupName": null
+            },
+            {
+                "id": 208,
+                "name": "UPDATE_COMMISSION_RULE",
+                "description": "Update Commission Rule",
+                "path": "/delivery-service/api/v1/commission-rule/{id}",
+                "httpMethod": "PUT",
+                "createdAt": "2026-08-05T02:53:25.889444Z",
+                "groupName": null
+            },
+            {
+                "id": 209,
+                "name": "DELETE_COMMISSION_RULE",
+                "description": "Delete Commission Rule",
+                "path": "/delivery-service/api/v1/commission-rule/{id}",
+                "httpMethod": "DELETE",
+                "createdAt": "2026-08-05T02:53:25.889444Z",
+                "groupName": null
+            },
+            {
+                "id": 210,
+                "name": "GET_COMMISSION_PARAM",
+                "description": "Get Commission Params",
+                "path": "/delivery-service/api/v1/commission-rule/param",
+                "httpMethod": "GET",
+                "createdAt": "2026-08-05T02:53:25.889444Z",
+                "groupName": null
+            },
+            {
+                "id": 211,
+                "name": "CREATE_TIER_PRICE",
+                "description": "Create Tier Price",
+                "path": "/delivery-service/api/v1/tier-price",
+                "httpMethod": "POST",
+                "createdAt": "2026-08-05T03:00:15.999522Z",
+                "groupName": null
+            },
+            {
+                "id": 212,
+                "name": "GET_TIER_PRICE",
+                "description": "Get Tier Price",
+                "path": "/delivery-service/api/v1/tier-price/{id}",
+                "httpMethod": "GET",
+                "createdAt": "2026-08-05T03:00:15.999522Z",
+                "groupName": null
+            },
+            {
+                "id": 213,
+                "name": "UPDATE_TIER_PRICE",
+                "description": "Update Tier Price",
+                "path": "/delivery-service/api/v1/tier-price/{id}",
+                "httpMethod": "PUT",
+                "createdAt": "2026-08-05T03:00:15.999522Z",
+                "groupName": null
+            },
+            {
+                "id": 214,
+                "name": "DELETE_TIER_PRICE",
+                "description": "Delete Tier Price",
+                "path": "/delivery-service/api/v1/tier-price/{id}",
+                "httpMethod": "DELETE",
+                "createdAt": "2026-08-05T03:00:15.999522Z",
+                "groupName": null
+            },
+            {
+                "id": 215,
+                "name": "GET_TIER_PRICE_PARAM",
+                "description": "Get Tier Price Params",
+                "path": "/delivery-service/api/v1/tier-price/param",
+                "httpMethod": "GET",
+                "createdAt": "2026-08-05T03:00:15.999522Z",
+                "groupName": null
+            },
+            {
+                "id": 216,
+                "name": "GET_STOCK_SUMMARY",
+                "description": "Can get stock summary",
+                "path": "/merchant-service/api/v1/inventories/stock-summary",
+                "httpMethod": "GET",
+                "createdAt": "2026-08-25T02:28:46.354705Z",
+                "groupName": null
+            },
+            {
+                "id": 217,
+                "name": "POST_PAYMENT_WEBHOOK",
+                "description": "Can receive payment webhook",
+                "path": "/payment-service/api/v1/webhooks",
+                "httpMethod": "POST",
+                "createdAt": "2026-08-27T02:40:20.667872Z",
+                "groupName": null
+            },
+            {
+                "id": 218,
+                "name": "POST_PAYMENT_KHQR",
+                "description": "Can create KHQR payment",
+                "path": "/payment-service/api/v1/payment/khqr",
+                "httpMethod": "POST",
+                "createdAt": "2026-08-27T02:40:20.667872Z",
+                "groupName": null
+            },
+            {
+                "id": 219,
+                "name": "GET_PAYMENT_PARAM",
+                "description": "Can get payment param",
+                "path": "/payment-service/api/v1/payment/param",
+                "httpMethod": "GET",
+                "createdAt": "2026-08-27T02:40:20.667872Z",
+                "groupName": null
+            },
+            {
+                "id": 221,
+                "name": "GET_COMMISSION_TRANSACTION",
+                "description": "Can get commission transaction",
+                "path": "/delivery-service/api/v1/commission-transaction",
+                "httpMethod": "GET",
+                "createdAt": "2026-08-27T03:40:00.099794Z",
+                "groupName": null
+            },
+            {
+                "id": 222,
+                "name": "GET_PRODUCT_IMAGE",
+                "description": "Can get product image",
+                "path": "/merchant-service/api/v1/products/{id}/images/{id}",
+                "httpMethod": "GET",
+                "createdAt": "2026-08-28T04:15:33.685592Z",
+                "groupName": null
+            },
+            {
+                "id": 223,
+                "name": "GET_REFRESH_TOKEN",
+                "description": "Can get refresh token",
+                "path": "/auth-service/api/auth/refresh-token",
+                "httpMethod": "POST",
+                "createdAt": "2026-08-28T08:37:26.990392Z",
+                "groupName": null
+            },
+            {
+                "id": 224,
+                "name": "GET_CTEGORY_IMAGE",
+                "description": "Can get category image",
+                "path": "/merchant-service/api/v1/categories/{id}/image",
+                "httpMethod": "GET",
+                "createdAt": "2026-08-28T08:41:24.615306Z",
+                "groupName": null
+            },
+            {
+                "id": 225,
+                "name": "GET_PRODUCT_BY_BRANCH",
+                "description": "Can get product by branch",
+                "path": "/merchant-service/api/v1/products/branch/{id}",
+                "httpMethod": "GET",
+                "createdAt": "2026-09-01T06:29:22.039119Z",
+                "groupName": null
+            },
+            {
+                "id": 226,
+                "name": "GET_VEHICLE_BY_ID",
+                "description": "Can get vehicle by id",
+                "path": "/vehicle-service/api/v1/vehicle/{id}",
+                "httpMethod": "GET",
+                "createdAt": "2026-09-07T07:30:20.820535Z",
+                "groupName": null
+            },
+            {
+                "id": 227,
+                "name": "GET_MY_CART",
+                "description": "Can get my carts",
+                "path": "/merchant-service/api/v1/me",
+                "httpMethod": "GET",
+                "createdAt": "2026-09-08T08:10:01.006231Z",
+                "groupName": null
+            },
+            {
+                "id": 228,
+                "name": "CREATE CART",
+                "description": "Can get create cart",
+                "path": "/merchant-service/api/v1/carts",
+                "httpMethod": "POST",
+                "createdAt": "2026-09-08T08:11:24.047530Z",
+                "groupName": null
+            },
+            {
+                "id": 229,
+                "name": "GET_MY_CARTS",
+                "description": "Can get my carts",
+                "path": "/merchant-service/api/v1/carts/me",
+                "httpMethod": "GET",
+                "createdAt": "2026-09-08T08:12:33.690066Z",
+                "groupName": null
+            },
+            {
+                "id": 231,
+                "name": "ADD TO CART",
+                "description": "Can add to cart",
+                "path": "/merchant-service/api/v1/carts/items",
+                "httpMethod": "POST",
+                "createdAt": "2026-09-08T08:14:11.105294Z",
+                "groupName": null
+            },
+            {
+                "id": 232,
+                "name": "GET_CART_BY_ID",
+                "description": "Can get cart by id",
+                "path": "/merchant-service/api/v1/carts/{id}",
+                "httpMethod": "GET",
+                "createdAt": "2026-09-08T08:17:09.190268Z",
+                "groupName": null
+            },
+            {
+                "id": 233,
+                "name": "GET_BASE_FEE_HISTORY",
+                "description": "Can get view base fee history",
+                "path": "/delivery-service/api/v1/base-fee/history",
+                "httpMethod": "GET",
+                "createdAt": "2026-09-14T07:24:44.799640Z",
+                "groupName": null
+            },
+            {
+                "id": 234,
+                "name": "GET_MERCHANT_BY_ID",
+                "description": "Can get merchant by ID",
+                "path": "/person-service/api/v1/merchant/{id}",
+                "httpMethod": "GET",
+                "createdAt": "2026-09-17T06:50:47.053234Z",
+                "groupName": null
+            },
+            {
+                "id": 235,
+                "name": "UPDATE_MERCHANT",
+                "description": "Can update merchant",
+                "path": "/person-service/api/v1/merchant/{id}",
+                "httpMethod": "PUT",
+                "createdAt": "2026-09-17T06:50:47.053234Z",
+                "groupName": null
+            },
+            {
+                "id": 236,
+                "name": "DELETE_MERCHANT",
+                "description": "Can delete merchant",
+                "path": "/person-service/api/v1/merchant/{id}",
+                "httpMethod": "DELETE",
+                "createdAt": "2026-09-17T06:50:47.053234Z",
+                "groupName": null
+            },
+            {
+                "id": 237,
+                "name": "GET_MERCHANTS",
+                "description": "Can get merchants",
+                "path": "/person-service/api/v1/merchant",
+                "httpMethod": "GET",
+                "createdAt": "2026-09-17T06:50:47.053234Z",
+                "groupName": null
+            },
+            {
+                "id": 238,
+                "name": "CREATE_MERCHANT",
+                "description": "Can create merchant",
+                "path": "/person-service/api/v1/merchant",
+                "httpMethod": "POST",
+                "createdAt": "2026-09-17T06:50:47.053234Z",
+                "groupName": null
+            },
+            {
+                "id": 239,
+                "name": "GET_MERCHANT_PARAM",
+                "description": "Can get merchant parameters",
+                "path": "/person-service/api/v1/merchant/param",
+                "httpMethod": "GET",
+                "createdAt": "2026-09-17T06:50:47.053234Z",
+                "groupName": null
+            }
+        ],
+        "pageNo": 0,
+        "pageSize": 2000,
+        "totalElements": 214,
+        "totalPages": 1,
+        "last": true
+    }
+}

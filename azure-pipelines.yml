@@ -1,0 +1,117 @@
+variables:
+  - name: isDevelopmentBranch
+    value: $[eq(variables['Build.SourceBranchName'], 'dev')]
+  - name: isStagingBranch
+    value: $[eq(variables['Build.SourceBranchName'], 'staging')]
+  - name: isPreProductionBranch
+    value: $[eq(variables['Build.SourceBranchName'], 'pre-production')]
+  - name: isProductionBranch
+    value: $[eq(variables['Build.SourceBranchName'], 'production')]
+  - name: isMainBranch
+    value: $[eq(variables['Build.SourceBranchName'], 'main')]
+  - name: imageName
+    value: hrms-report-service
+  - name: imageTarDirectory
+    value: ~/docker/report-service/$(Build.SourceBranchName)
+
+stages:
+  - stage: Build
+    displayName: Build
+    pool: Docker
+    jobs:
+      - job: Build
+        pool: Docker
+        steps:
+          # - task: Docker@2
+          #   displayName: Build Next.js image
+          #   inputs:
+          #     repository: "logistic-portal"
+          #     command: "build"
+          #     Dockerfile: "$(Build.SourcesDirectory)/Dockerfile"
+          #     tags: |
+          #       $(Build.SourceBranchName)
+          #       latest
+          #     arguments: "--no-cache"
+          - script: |
+              docker compose   \
+                --env-file $(Build.SourcesDirectory)/.env.$(Build.SourceBranchName) \
+                -f $(Build.SourcesDirectory)/docker-compose.yaml \
+                build
+
+          - script: |
+              docker save logistic-portal:$(Build.SourceBranchName) \
+                -o logistic-portal.tar
+            displayName: Save Docker image
+
+          - task: CopyFiles@2
+            inputs:
+              Contents: |
+                logistic-portal.tar
+                docker-compose.yaml
+                docker-compose.$(Build.SourceBranchName).yaml
+                .env.$(Build.SourceBranchName)
+              TargetFolder: $(Build.ArtifactStagingDirectory)
+
+          - task: PublishBuildArtifacts@1
+            inputs:
+              ArtifactName: logistic-portal
+              PathtoPublish: $(Build.ArtifactStagingDirectory)
+
+  - stage: DevelopmentDeployment
+    displayName: Development Deployment
+    dependsOn: Build
+    condition: and(succeeded('Build'), eq(variables.isDevelopmentBranch, true))
+    jobs:
+      - deployment: DeploytoServer19
+        environment:
+          name: development
+          resourceType: VirtualMachine
+          tags: dev19
+        strategy:
+          runOnce:
+            deploy:
+              steps:
+                - download: current
+                  artifact: logistic-portal
+                # Optional: list files to make sure everything is there
+                - script: ls -la
+                  displayName: Show downloaded files
+                  workingDirectory: $(Pipeline.Workspace)/logistic-portal
+                - script: |
+                    docker load -i logistic-portal.tar
+                    docker compose \
+                      -p logistic-portal-$(Build.SourceBranchName) \
+                      -f docker-compose.yaml \
+                      -f docker-compose.dev.yaml \
+                      up -d --force-recreate --remove-orphans
+                  displayName: Load image & Deploy with docker compose
+                  workingDirectory: $(Pipeline.Workspace)/logistic-portal
+  - stage: SystemIntegrationDeployment
+    displayName: System Integration Deployment
+    dependsOn: Build
+    condition: and(succeeded('Build'), eq(variables.isStagingBranch, true))
+    jobs:
+      - deployment: DeploytoServer19
+        environment:
+          name: development
+          resourceType: VirtualMachine
+          tags: dev19
+        strategy:
+          runOnce:
+            deploy:
+              steps:
+                - download: current
+                  artifact: logistic-portal
+                # Optional: list files to make sure everything is there
+                - script: ls -la
+                  displayName: Show downloaded files
+                  workingDirectory: $(Pipeline.Workspace)/logistic-portal
+                - script: |
+                    docker load -i logistic-portal.tar
+                    docker compose \
+                      -p logistic-portal-$(Build.SourceBranchName) \
+                      -f docker-compose.yaml \
+                      -f docker-compose.staging.yaml \
+                      up -d --force-recreate --remove-orphans
+                  displayName: Load image & Deploy with docker compose
+                  workingDirectory: $(Pipeline.Workspace)/logistic-portal
