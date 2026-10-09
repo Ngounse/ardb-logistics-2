@@ -12,7 +12,7 @@
     "server:beacon": "npm --prefix D:/src/ng-my-app run server:beacon",
     "g:permissions": "tsx scripts/generate-permissions.ts",
     "g:git": "node scripts/get-git-info.mjs",
-    "lint": "eslint"
+    "lint": "next lint"
   },
   "dependencies": {
     "@mapbox/mapbox-gl-draw": "^1.5.1",
