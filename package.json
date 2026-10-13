@@ -50,7 +50,6 @@
     "@stomp/stompjs": "^7.3.0",
     "@turf/turf": "^7.3.0",
     "@vis.gl/react-google-maps": "^1.8.2",
-    "@watergis/maplibre-gl-terradraw": "^1.16.0",
     "autoprefixer": "^10.4.21",
     "axios": "^1.13.2",
     "class-variance-authority": "^0.7.1",

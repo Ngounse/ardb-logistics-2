@@ -113,9 +113,6 @@ importers:
       '@vis.gl/react-google-maps':
         specifier: ^1.8.2
         version: 1.8.3(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
-      '@watergis/maplibre-gl-terradraw':
-        specifier: ^1.16.0
-        version: 1.17.0(maplibre-gl@5.16.0)(terra-draw@1.37.0)
       autoprefixer:
         specifier: ^10.4.21
         version: 10.5.0(postcss@8.5.15)
@@ -1935,20 +1932,6 @@ packages:
       react: '>=16.8.0 || ^19.0 || ^19.0.0-rc'
       react-dom: '>=16.8.0 || ^19.0 || ^19.0.0-rc'
 
-  '@watergis/maplibre-gl-terradraw@1.17.0':
-    resolution: {integrity: sha512-2KMRSJQJgA3cuFbjxzEjswvzn0gRpU5JWI0UL8lJri5gOJUoejIk2CE+SkQOyrSPt4bX2Ki4DTbEYgtw7u63BA==}
-    engines: {pnpm: ^12.0.0}
-    peerDependencies:
-      maplibre-gl: ^4.0.0 || ^5.0.0 || ^6.0.0
-      terra-draw: ^1.0.0
-      terra-draw-maplibre-gl-adapter: ^1.0.0
-      terradraw: '*'
-    peerDependenciesMeta:
-      terra-draw-maplibre-gl-adapter:
-        optional: true
-      terradraw:
-        optional: true
-
   acorn-jsx@5.3.2:
     resolution: {integrity: sha512-rq9s+JNhf0IChjtDXxllJ7g41oZk5SlXtp0LHwyA5cejwn7vKmKp4pPri6YEePv2PU65sAsegbXtIinmDFDXgQ==}
     peerDependencies:
@@ -3059,9 +3042,6 @@ packages:
     resolution: {integrity: sha512-3ofp+LL8E+pK/JuPLPggVAIaEuhvIz4qNcf3nA1Xn2o/7fb7s/TYpHhwGDv1ZU3PkBluUVaF8PyCHcm48cKLWQ==}
     engines: {node: '>=14.0.0'}
     hasBin: true
-
-  terra-draw@1.37.0:
-    resolution: {integrity: sha512-t8aGT6tZM+ZTygPg3nRG0/B/OtjiQfrjJauMB1MLyJTFvt4gDNSgk7InFIYzGc/zOwHICJEEDn8Hq+pKzC8mag==}
 
   thenify-all@1.6.0:
     resolution: {integrity: sha512-RNxQH/qI8/t3thXJDwcstUO4zeqo64+Uy/+sNVRBx4Xn2OX+OZ9oP+iJnNFqplFra2ZUVeKCSa2oVWi3T4uVmA==}
@@ -5612,11 +5592,6 @@ snapshots:
       react: 19.2.6
       react-dom: 19.2.6(react@19.2.6)
 
-  '@watergis/maplibre-gl-terradraw@1.17.0(maplibre-gl@5.16.0)(terra-draw@1.37.0)':
-    dependencies:
-      maplibre-gl: 5.16.0
-      terra-draw: 1.37.0
-
   acorn-jsx@5.3.2(acorn@8.16.0):
     dependencies:
       acorn: 8.16.0
@@ -6747,8 +6722,6 @@ snapshots:
     transitivePeerDependencies:
       - tsx
       - yaml
-
-  terra-draw@1.37.0: {}
 
   thenify-all@1.6.0:
     dependencies:

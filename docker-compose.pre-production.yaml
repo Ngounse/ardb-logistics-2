@@ -1,0 +1,7 @@
+services:
+  nextjs:
+    container_name: logistic-portal-pre-production
+    ports:
+    - "3002:3000"
+    env_file:
+      - .env.pre-production

@@ -86,7 +86,7 @@ export default function SettingsPage() {
   })
 
 
-  useEffect(() => {
+  useEffect(() => {    
     if (userInfo) {
       setUserProfile({
         firstName: userInfo.firstName ?? "",
@@ -237,16 +237,28 @@ export default function SettingsPage() {
   const handleSave = () => {
     // Simulate save operation
     setIsSaving(true)
-    api.put(`person-service/api/v1/persons/profile`, {
+    void api.put(`person-service/api/v1/persons/profile`, {
       firstName: userProfile.firstName,
       lastName: userProfile.lastName,
       gender: userProfile.gender,
       dateOfBirth: userProfile.dateOfBirth,
       // Include the updated profile data here
     }).then(() => {
+      // updateUserInfo({
+      //   firstName: userProfile.firstName,
+      //   lastName: userProfile.lastName,
+      //   gender: userProfile.gender,
+      //   dateOfBirth: userProfile.dateOfBirth,
+      // });
       toast({
         title: "Settings Saved",
         description: "Your settings have been saved successfully",
+      })
+    }).catch((error) => {
+      console.error("Error saving profile:", error)
+      toast({
+        title: "Settings Not Saved",
+        description: "There was a problem saving your settings",
       })
     }).finally(() => {
       setIsSaving(false);

@@ -410,6 +410,10 @@ export function TopBar({ toggleSidebar, sidebarOpen }: TopBarProps) {
                   <Mail className="mr-2 h-4 w-4" />
                   Contact Client
                 </Button>
+                <Button variant="destructive" onClick={handleLogout}>
+                  <LogOut className="mr-2 h-4 w-4" />
+                  <span>Log out</span>
+                </Button>
               </div>
             </div>
           )}

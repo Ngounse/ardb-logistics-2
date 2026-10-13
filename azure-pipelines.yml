@@ -39,7 +39,7 @@ stages:
                 build
 
           - script: |
-              docker save logistic-portal:$(Build.SourceBranchName) \
+              docker save logistic-portal:latest \
                 -o logistic-portal.tar
             displayName: Save Docker image
 
@@ -115,3 +115,34 @@ stages:
                       up -d --force-recreate --remove-orphans
                   displayName: Load image & Deploy with docker compose
                   workingDirectory: $(Pipeline.Workspace)/logistic-portal
+
+  - stage: UserAcceptanceTestingDeployment
+    displayName: User Acceptance Testing Deployment
+    dependsOn: Build
+    condition: and(succeeded('Build'), eq(variables.isPreProductionBranch, true))
+    jobs:
+      - deployment: DeploytoServer19
+        environment:
+          name: development
+          resourceType: VirtualMachine
+          tags: dev19
+        strategy:
+          runOnce:
+            deploy:
+              steps:
+                - download: current
+                  artifact: logistic-portal
+                # Optional: list files to make sure everything is there
+                - script: ls -la
+                  displayName: Show downloaded files
+                  workingDirectory: $(Pipeline.Workspace)/logistic-portal
+                - script: |
+                    docker load -i logistic-portal.tar
+                    docker compose \
+                      -p logistic-portal-$(Build.SourceBranchName) \
+                      -f docker-compose.yaml \
+                      -f docker-compose.pre-production.yaml \
+                      up -d --force-recreate --remove-orphans
+                  displayName: Load image & Deploy with docker compose
+                  workingDirectory: $(Pipeline.Workspace)/logistic-portal
+

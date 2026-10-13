@@ -1,0 +1,7 @@
+services:
+  nextjs:
+    container_name: logistic-portal-dev
+    ports:
+    - "3001:3000"
+    env_file:
+        - .env.dev

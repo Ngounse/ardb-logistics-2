@@ -133,7 +133,7 @@ export const AuthProvider = ({
             }
         };
 
-        fetchProfile();
+        void fetchProfile();
     }, []);
 
     const hasPermission = (permission: string) => {
